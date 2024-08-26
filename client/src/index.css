@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default (Light) Theme */
+:root {
+  --primary-color: #54a6dd;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --button-bg-color: #54a6dd;
+  --button-text-color: #ffffff;
+}
+
+/* Dark Theme */
+.dark {
+  --primary-color: #4a90e2;
+  --background-color: #1f1f1f;
+  --text-color: #ffffff;
+  --button-bg-color: #4a90e2;
+  --button-text-color: #ffffff;
+}
+
+/* Solarized Theme */
+.solarized {
+  --primary-color: #268bd2;
+  --background-color: #fdf6e3;
+  --text-color: #657b83;
+  --button-bg-color: #268bd2;
+  --button-text-color: #ffffff;
+}
+
+/* High Contrast Theme */
+.high-contrast {
+  --primary-color: #ffcc00;
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --button-bg-color: #ffcc00;
+  --button-text-color: #000000;
+}
+
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: var(--background-color);
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+
+
+
+.navbar {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+}
+.search-bar {
+  position: relative; 
+  z-index: 500;
+}
