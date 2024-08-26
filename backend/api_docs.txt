@@ -1,0 +1,110 @@
+url => http://localhost:5000/notes/
+method => POST
+headrer => Authorization: "login-token"
+json body => {
+    "name":"title2",
+    "content":"content2",
+    "description":"description2"
+}
+
+description => create a note
+
+=====================================================================
+
+url => http://localhost:5000/notes/
+method => GET
+headrer => Authorization: "login-token"
+
+description => get all the notes created by user
+
+
+======================================================================
+
+url => http://localhost:5000/notes/<note_id>
+method => GET
+headrer => Authorization: "login-token"
+
+description => get note details of a project
+
+
+======================================================================
+
+url => http://localhost:5000/notes/<note_id>
+method => PUT
+headrer => Authorization: "login-token"
+json body => {
+    "name":"name1",
+    "description":"description1",
+    "content":"content1",
+    "flowchart_id":"12ty"
+}
+
+description => update note data
+
+======================================================================
+
+url => http://localhost:5000/notes/<note_id>
+method => DELETE
+headrer => Authorization: "login-token"
+
+description => delete a note
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Flowchart API>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+======================================================================
+
+url => http://localhost:5000/flowcharts
+method => POST
+headrer => Authorization: "login-token"
+formData body =>{
+    "title":"",
+    "image":"",
+}
+
+response => {
+    "filename": "2d0f8dc558e44bc0a87f2076a6b16f52_20240808121948.png",
+    "flowchart_id": "66b4b7e467ff5a1c0c244d3d",
+    "image_path": "/static/uploaded_images/2d0f8dc558e44bc0a87f2076a6b16f52_20240808121948.png",
+    "message": "Flowchart created and image saved successfully"
+}
+
+description => crate a Flowchart
+
+
+======================================================================
+
+url => http://localhost:5000/flowchart/<flowchart_id>
+method => GET
+headrer => Authorization: "login-token"
+
+response =>{
+    "_id": "66b4b7e467ff5a1c0c244d3d",
+    "filename": "2d0f8dc558e44bc0a87f2076a6b16f52_20240808121948.png",
+    "image_path": "/static/uploaded_images/2d0f8dc558e44bc0a87f2076a6b16f52_20240808121948.png",
+    "title": "test"
+}
+
+description => get a flowchart
+
+
+======================================================================
+
+url => http://localhost:5000/flowchart/<flowchart_id>
+method => PUT
+headrer => Authorization: "login-token"
+formData body =>{
+    "title":"",
+    "image":"",
+}
+
+description => update flowchart fields
+
+======================================================================
+
+url => http://localhost:5000/flowchart/<flowchart_id>
+method => DELETE
+headrer => Authorization: "login-token"
+
+description => delete a flowchart
